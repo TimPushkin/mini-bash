@@ -1,0 +1,13 @@
+(env
+ (dev
+  (flags
+   (:standard -warn-error -A -w -9-32-34))))
+
+(executable
+ (name REPL)
+ (public_name REPL)
+ (modules REPL)
+ (libraries minibash))
+
+(cram
+ (deps ./REPL.exe %{bin:REPL}))

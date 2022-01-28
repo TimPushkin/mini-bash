@@ -1,0 +1,20 @@
+(executable
+ (name demoParse)
+ (modules demoParse)
+ (public_name demoParse)
+ (libraries minibash stdio))
+
+(executable
+ (name demoInterpret)
+ (modules demoInterpret)
+ (public_name demoInterpret)
+ (libraries minibash stdio))
+
+(executable
+ (name demoInterrupt)
+ (modules demoInterrupt)
+ (public_name demoInterrupt)
+ (libraries minibash stdio))
+
+(cram
+ (deps ./demoParse.exe ./demoInterpret.exe ./demoInterrupt.exe))
